@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>yqs.blog</groupId>
+    <artifactId>yqs-blog</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>yqs-blog</name>
+    <description>yqs基于spring Cloud Alibaba博客个人博客系统</description>
+
+    <developers>
+        <developer>
+            <id>yqs</id>
+            <name>yuanbin</name>
+            <email>spring_1024@outlook</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <yqs-blog.version>1.0</yqs-blog.version>
+    </properties>
+
+    <modules>
+        <module>yqs-common</module>
+        <module>yqs-dependencies</module>
+        <module>yqs-gateway</module>
+    </modules>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>yqs.blog</groupId>
+                <artifactId>yqs-dependencies</artifactId>
+                <type>pom</type>
+                <version>${yqs-blog.version}</version>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+    </dependencies>
+
+
+</project>

@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 124.223.48.92:8848
+        namespace: a5b96324-e69b-4915-81e7-41a2550135d2
+      config:
+        file-extension: yml
+        server-addr: 124.223.48.92:8848
+        namespace: a5b96324-e69b-4915-81e7-41a2550135d2

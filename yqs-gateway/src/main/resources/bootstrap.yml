@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: yqs-gateway
+  profiles:
+    active: dev

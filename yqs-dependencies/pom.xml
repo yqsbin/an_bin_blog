@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.2</version>
+        <relativePath/>
+    </parent>
+    <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>yqs.blog</groupId>
+    <artifactId>yqs-dependencies</artifactId>
+    <description>yqs个人博客系统依赖管理</description>
+    <version>1.0</version>
+    <name>yqs-dependencies</name>
+
+    <developers>
+        <developer>
+            <name>yuanbin</name>
+            <email>spring_1024@outlook.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <!--yqs blog系统版本-->
+        <yqs-blog.version>1.0</yqs-blog.version>
+        <spring.boot.version>2.6.2</spring.boot.version>
+        <spring.cloud.version>2021.0.1</spring.cloud.version>
+        <spring.cloud.alibab.version>2021.0.1.0</spring.cloud.alibab.version>
+        <java.version>1.8</java.version>
+
+        <!--数据库相关-->
+        <mysql-connector-java.version>8.0.27</mysql-connector-java.version>
+        <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <hutool.version>5.7.19</hutool.version>
+        <lombok.version>1.18.20</lombok.version>
+    </properties>
+
+    <!--版本好进行管理-->
+    <dependencyManagement>
+        <!--微服务基础包-->
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibab.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--数据库相关-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
