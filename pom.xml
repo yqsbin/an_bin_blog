@@ -21,12 +21,17 @@
 
     <properties>
         <yqs-blog.version>1.0</yqs-blog.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
     <modules>
         <module>yqs-common</module>
         <module>yqs-dependencies</module>
         <module>yqs-gateway</module>
+        <module>yqs-system</module>
+        <module>yqs-search</module>
+        <module>yqs-uaa</module>
     </modules>
 
 
@@ -41,13 +46,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        </dependency>
-    </dependencies>
-
 
 </project>
